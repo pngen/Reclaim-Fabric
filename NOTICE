@@ -1,0 +1,14 @@
+Reclaim Fabric
+Copyright 2026 Reclaim Fabric contributors
+
+This product includes software developed by the Reclaim Fabric contributors.
+
+Reclaim Fabric is an independent project. It is not affiliated with, endorsed
+by, or a fork of LMCache, Mooncake, NVIDIA Dynamo, vLLM, SGLang, Redis, Ray,
+or any other inference-serving cache or distributed data system.
+
+FlashTier, Context Fabric, and Compute Fabric are separate sibling projects.
+Reclaim Fabric defines clean conceptual integration boundaries with them, but
+does not contain their source code and does not require them to build or run.
+
+This product uses the Apache License 2.0. See LICENSE.

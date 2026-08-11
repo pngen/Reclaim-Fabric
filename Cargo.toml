@@ -1,0 +1,60 @@
+[package]
+name = "reclaim-fabric"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.75"
+description = "Reclaim Fabric: a vendor-neutral machine-state reclamation runtime for AI infrastructure. It answers: what state is still worth keeping?"
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/summon-software-labs/reclaim-fabric"
+keywords = ["reclamation", "lifecycle", "ai-infrastructure", "state", "runtime"]
+categories = ["development-tools", "memory-management", "network-programming"]
+
+[lib]
+name = "reclaim_fabric"
+path = "src/lib.rs"
+
+[[bin]]
+name = "reclaim-fabric"
+path = "src/main.rs"
+
+[dependencies]
+rusqlite = { version = "=0.31.0", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+uuid = { version = "=1.8.0", features = ["v4", "serde"] }
+sha2 = "0.10"
+crc32c = "0.6"
+zstd = "0.13"
+thiserror = "1"
+clap = { version = "=4.5.4", features = ["derive"] }
+log = "0.4"
+env_logger = "0.11"
+base64 = "0.22"
+ctrlc = "3"
+
+[dev-dependencies]
+tempfile = "=3.10.1"
+criterion = "0.5"
+
+[features]
+default = []
+
+[profile.release]
+lto = true
+codegen-units = 1
+
+[[bench]]
+name = "throughput"
+harness = false
+
+[[bench]]
+name = "candidate_selection"
+harness = false
+
+[[bench]]
+name = "integrity"
+harness = false
+
+[package.metadata.docs.rs]
+all-features = true
