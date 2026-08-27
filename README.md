@@ -174,8 +174,4 @@ cargo bench
 
 ## License
 
-Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
-
-Dependency licenses: SQLite (public domain, bundled via rusqlite), Zstandard (BSD-3-Clause),
-uuid/serde/serde_json/thiserror/clap/log/env_logger/base64/ctrlc (MIT/Apache-2.0),
-sha2 (MIT/Apache-2.0), and crc32c (BSD-2-Clause).
+Apache License 2.0. Copyright 2026 Summon Software Labs. No telemetry transmission.
